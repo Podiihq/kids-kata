@@ -1,0 +1,19 @@
+#heading{
+	text-align: center;
+}
+
+#image{
+	text-align: center;
+}
+
+#answer{
+	text-align: center;
+}
+
+#displayans{
+	text-align: center;
+}
+
+.is_collapsed{
+	display: none;
+}

@@ -12,6 +12,17 @@ var app = new Vue({
   methods: {
     wololo: function(){
       app.seen = true
+    }
   }
-}
 })
+const app1 = new Clarifai.App({
+  apiKey: '902c4900347f4383819c908db6eee558'
+});
+app1.models.predict(Clarifai.GENERAL_MODEL, 'https://postmediacanoe.files.wordpress.com/2018/07/kim-kardashian-e1531963765857.jpg').then(
+  function(response){
+    console.log("popo")
+  },
+  function(err){
+    console.error(err)
+  }
+);

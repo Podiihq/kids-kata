@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="colors_and_shapes.css">
+	<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	
+
+</head>
+<body>
+	<div id="heading">
+		<h1>{{ heading }}</h1>
+		<p>{{ slogan }}</p>
+	</div>
+	<div id="image">
+		<img src="http://placehold.it/200">
+		<p>{{ shapes }}</p>
+	</div>
+	    <div id="answer">
+		<button class="choices"> {{ no1 }} </button> <br /><br>
+		<button class="choices"> {{ no2 }}</button> <br /><br>
+		<button class="choices"> {{ no3 }}</button>	<br><br>
+		
+	</div>
+	<div id="displayans">
+		<div>
+		<p>{{ ans }}
+		</p>
+		<audio controls>
+			<source src="tone1.mp3" type="audio/mpeg">
+		</audio>
+
+	</div>
+	
+	<button onclick="answer()"> See the answer</button>
+	
+	</div>
+
+<script type="text/javascript" src="colors_and_shapes.js"></script>
+</body>
+</html>

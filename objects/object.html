@@ -1,17 +1,17 @@
-<!DOCTYPE HTML>
-<HTML>
-  <link rel="stylesheet" type=text/css href="object.css">
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" type="text/css" href="object.css">
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
   <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
 
-  <HEAD>
+  <head>
     <div id="header">
       <p>{{ message  }}</p>
     </div>
-  </HEAD>
+  </head>
 
-  <BODY>
+  <body>
     <div id="object">
       <p>{{ message  }}</p>
     </div>
@@ -39,6 +39,9 @@
       <p>{{ message  }}</p>
     </div>
     
+    <button type="button" onclick="document.write("answer")">Display Answer..</button>
+
+
     <div id="audio">
     <audio controls>
       <source src="Meow.ogg" type="audio/ogg">
@@ -47,6 +50,6 @@
 
 
     <script type="text/javascript" src="object.js"></script>
-  </BODY>
-</HTML>
+  </body>
+</html>
 

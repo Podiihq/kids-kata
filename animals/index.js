@@ -10,19 +10,22 @@ var app = new Vue({
     seen: false
   },
   methods: {
-    wololo: function(){
+    hide: function(){
       app.seen = true
+    },
+    clarifai: function(){
+      const app1 = new Clarifai.App({
+        apiKey: '18e93e99d9944d12b58ac8f963ae00d4'
+      });
+      app1.models.predict(Clarifai.GENERAL_MODEL, 'https://postmediacanoe.files.wordpress.com/2018/07/kim-kardashian-e1531963765857.jpg').then(
+        function(response){
+          console.log("popo");
+        },
+        function(err){
+          console.error(err)
+        }
+      );
     }
   }
 })
-const app1 = new Clarifai.App({
-  apiKey: '902c4900347f4383819c908db6eee558'
-});
-app1.models.predict(Clarifai.GENERAL_MODEL, 'https://postmediacanoe.files.wordpress.com/2018/07/kim-kardashian-e1531963765857.jpg').then(
-  function(response){
-    console.log("popo")
-  },
-  function(err){
-    console.error(err)
-  }
-);
+

@@ -33,3 +33,17 @@ new Vue({
     }
 
 })
+
+  const app = new Clarifai.App({
+    apiKey: '817dc940f3764c3b91d389b1bc982d10'
+  });
+
+  app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg').then(
+    function(response) {
+      console.log(response.outputs[0].data.concepts[0].name);
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+

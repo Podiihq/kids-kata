@@ -24,6 +24,7 @@
 		
 	</div>
 	<div id="displayans">
+		<span v-if="seen">
 		<div>
 		<p>{{ ans }}
 		</p>
@@ -34,7 +35,7 @@
 	</div>
 	
 	<button onclick="answer()"> See the answer</button>
-	
+		</span>
 	</div>
 
 <script type="text/javascript" src="colors_and_shapes.js"></script>

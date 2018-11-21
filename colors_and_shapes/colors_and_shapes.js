@@ -43,7 +43,8 @@ var displayans = new Vue ({
 	el: '#displayans',
 	data: {
 		collapsed: true,
-		ans: 'the answer is '
+		ans: 'the answer is ',
+		seen: false
 	}
 });
 
